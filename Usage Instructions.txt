@@ -1,0 +1,18 @@
+to run development server:
+	in main pycharm project directory:
+		cd crashprediction
+		python manage.py runserver
+		open http://127.0.0.1:8000/ in a browser
+
+
+Database console (not needed probably):
+	crashprediction directory with db.sqlite3 (the database)
+	sqlite3 db.sqlite3
+
+Important files/directories
+
+	Page template : crashprediction/crashpredictionapp/templates/index.html
+	Model : crashprediction/crashpredictionapp/models.py
+	Views (template assembly) : crashprediction/crashpredictionapp/views.py
+	
+
