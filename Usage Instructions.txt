@@ -16,3 +16,6 @@ Important files/directories
 	Views (template assembly) : crashprediction/crashpredictionapp/views.py
 	
 
+
+
+delete from `CrashData` where `crash id` not in ( SELECT * FROM (select min(`crash id`) from `CrashData` group by "crash id") AS temp_tab );
