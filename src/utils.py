@@ -1,8 +1,8 @@
 import numpy as np
 
 
-def _preprocess_Crash_ID(crash_id):
-    pass
+def preprocess_Crash_ID(crash_id):
+    return crash_id
 
 
 def preprocess_Adjusted_Average_Daily_Traffic_Amount(amount):
@@ -144,7 +144,88 @@ def preprocess_Longitude(longitude):
 def preprocess_Manner_of_Collision(manner):
     print('=== manner ===')
     print(set(manner))
-    pass
+    for idx, item in enumerate(manner):
+        if item == 'SAME DIRECTION - ONE LEFT TURN-ONE STOPPED':
+            pass
+        elif item == 'ONE MOTOR VEHICLE - OTHER':
+            pass
+        elif item == 'SAME DIRECTION - ONE RIGHT TURN-ONE STOPPED':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE STRAIGHT-ONE BACKING':
+            pass
+        elif item == 'OTHER - BOTH BACKING':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE BACKING-ONE STOPPED':
+            pass
+        elif item == 'ONE MOTOR VEHICLE - TURNING RIGHT':
+            pass
+        elif item == 'SAME DIRECTION - ONE STRAIGHT-ONE RIGHT TURN':
+            pass
+        elif item == 'OTHER - ONE LEFT TURN-ONE ENTERING OR LEAVING PARKING SPACE':
+            pass
+        elif item == 'ANGLE - ONE RIGHT TURN-ONE LEFT TURN':
+            pass
+        elif item == 'SAME DIRECTION - BOTH LEFT TURN':
+            pass
+        elif item == 'OPPOSITE DIRECTION - BOTH GOING STRAIGHT':
+            pass
+        elif item == 'ANGLE - BOTH RIGHT TURN':
+            pass
+        elif item == 'ANGLE - ONE STRAIGHT-ONE RIGHT TURN':
+            pass
+        elif item == 'ONE MOTOR VEHICLE - GOING STRAIGHT':
+            pass
+        elif item == 'ANGLE - BOTH LEFT TURN':
+            pass
+        elif item == 'SAME DIRECTION - BOTH RIGHT TURN':
+            pass
+        elif item == 'ANGLE - BOTH GOING STRAIGHT':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE LEFT TURN-ONE STOPPED':
+            pass
+        elif item == 'OTHER - BOTH ENTERING OR LEAVING A PARKING SPACE':
+            pass
+        elif item == 'OTHER - ONE STRAIGHT-ONE ENTERING OR LEAVING PARKING SPACE':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE STRAIGHT-ONE LEFT TURN':
+            pass
+        elif item == 'ONE MOTOR VEHICLE - TURNING LEFT':
+            pass
+        elif item == 'SAME DIRECTION - ONE STRAIGHT-ONE STOPPED':
+            pass
+        elif item == 'ANGLE - ONE RIGHT TURN-ONE STOPPED':
+            pass
+        elif item == 'ANGLE - ONE STRAIGHT-ONE STOPPED':
+            pass
+        elif item == 'OPPOSITE DIRECTION - BOTH LEFT TURNS':
+            pass
+        elif item == 'SAME DIRECTION - ONE STRAIGHT-ONE LEFT TURN':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE STRAIGHT-ONE STOPPED':
+            pass
+        elif item == 'ANGLE - ONE STRAIGHT-ONE BACKING':
+            pass
+        elif item == 'SAME DIRECTION - BOTH GOING STRAIGHT-REAR END':
+            pass
+        elif item == 'OTHER - ONE ENTERING OR LEAVING PARKING SPACE-ONE STOPPED':
+            pass
+        elif item == 'ONE MOTOR VEHICLE - BACKING':
+            pass
+        elif item == 'SAME DIRECTION - BOTH GOING STRAIGHT-SIDESWIPE':
+            pass
+        elif item == 'ANGLE - ONE STRAIGHT-ONE LEFT TURN':
+            pass
+        elif item == 'OTHER':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE RIGHT TURN-ONE LEFT TURN':
+            pass
+        elif item == 'ANGLE - ONE LEFT TURN-ONE STOPPED':
+            pass
+        elif item == 'SAME DIRECTION - ONE RIGHT TURN-ONE LEFT TURN':
+            pass
+        elif item == 'OPPOSITE DIRECTION - ONE STRAIGHT-ONE RIGHT TURN':
+            pass
+    return manner
 
 
 def preprocess_Number_of_Lanes(num_of_lanes):
@@ -155,7 +236,7 @@ def preprocess_Number_of_Lanes(num_of_lanes):
 def preprocess_Object_Struck(struck):
     print('=== struck ===')
     print(set(struck))
-    pass
+    return struck
 
 
 def preprocess_Outside_Shoulder_Width_on_Divided_Highway(width):
@@ -163,10 +244,10 @@ def preprocess_Outside_Shoulder_Width_on_Divided_Highway(width):
     return np.array(width)
 
 
-def preprocess_Property_Damages(property):
+def preprocess_Property_Damages(properties):
     print('=== property damages ===')
-    print(set(property))
-    pass
+    print(set(properties))
+    return properties
 
 
 def preprocess_Road_Class(road_class):
@@ -193,13 +274,13 @@ def preprocess_Road_Class(road_class):
 def preprocess_Street_Name(street_name):
     print('==== street name ===')
     print(set(street_name))
-    pass
+    return street_name
 
 
 def preprocess_Street_Number(street_num):
     print('==== street num ===')
     print(set(street_num))
-    pass
+    return street_num
 
 
 def preprocess_Surface_Condition(condition):
@@ -243,6 +324,7 @@ def preprocess_Weather_Condition(weather):
             weather[idx] = 8
         else:
             weather[idx] = 0
+    return np.array(weather)
 
 
 def preprocess_Driver_Alcohol_Result(alcohol):
